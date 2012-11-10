@@ -29,7 +29,7 @@ Vex.Flow.Test.MusicXML.simpleTest = function() {
   ok(true, 'part id count passed');
   var part = doc.getPart(0);
   ok(part, 'part object passed');
-  var measure = part.getMeasure(1);
+  var measure = part.getMeasure(0);
   ok(measure, 'measure object passed');
   var notes = measure.getNotes();
   ok(notes.length == 1, 'notes count passed');
@@ -43,7 +43,7 @@ Vex.Flow.Test.MusicXML.measureDrawTest = function(options, contextBuilder) {
   var stave = new Vex.Flow.Stave(10, 10, 520);
   stave.setContext(ctx);
   stave.draw();
-  doc.getPart(0).engraveMeasuresOnStaves(1, 1, stave, ctx);
+  doc.getPart(0).engraveMeasuresOnStaves(0, 0, stave, ctx);
   ok(true, 'Measure Drawn');
 }
 
