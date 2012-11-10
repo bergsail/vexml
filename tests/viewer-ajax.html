@@ -2,26 +2,11 @@
   <head>
     <title>VexFlow MusicXML Viewer</title>
 
-    <!-- Compiled Sources -->
-    <script src="./support/jquery.js"></script>
-    <script src="../build/vexflow/vexflow-free.js"></script>
-
-    <!-- VeXML source files -->
-    <script src="./header.js"></script>
-    <script src="./base.js"></script>
-    <script src="./element.js"></script>
-    <script src="./document.js"></script>
-    <script src="./part.js"></script>
-    <script src="./attributes.js"></script>
-    <script src="./measure.js"></script>
-    <script src="./note.js"></script>
-    <script src="./chord.js"></script>
-    <script src="./voice.js"></script>
-    <script src="./partstaff.js"></script>
-    <script src="./staffsystem.js"></script>
-
-    <script src="./support/examples.js"></script>
-    <script src="./viewer.js"></script>
+    <!-- Compiled Sources (may need to be copied to same directory) -->
+    <script src="jquery.js"></script>
+    <script src="vexflow-free.js"></script>
+    <script src="vexflow-musicxml-free.js"></script>
+    <script src="musicxml-viewer.js"></script>
 
     <script>
       // source: http://stackoverflow.com/a/901144
@@ -37,11 +22,7 @@
       $(document).ready(function() {
         var req = new XMLHttpRequest();
         var uri = getParameter('doc');
-        if (! uri) uri = 'bwv846p.xml';
-        if (uri.indexOf('/') == -1) {
-          // Relative URL in the "support" subdirectory
-          uri = 'support/' + uri;
-        }
+        if (! uri) uri = 'bach_bwv846p.xml';
         req.open('GET', uri, true);
         req.onreadystatechange = function() {
           if (req.readyState != 4) return;

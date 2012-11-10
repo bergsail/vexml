@@ -22,7 +22,7 @@ Vex.ML.Note.type = {
   "eighth": "8",
   "quarter": "4",
   "half": "2",
-  "whole": "1",
+  "whole": "1"
 };
 Vex.ML.Note.accidentals = {
   "sharp": "#",
@@ -34,7 +34,7 @@ Vex.ML.Note.accidentals = {
   "-1": "b",
   "-2": "bb",
   "1": "#",
-  "2": "##",
+  "2": "##"
 };
 
 Vex.ML.Note.prototype.init = function(element, options) {
@@ -71,7 +71,6 @@ Vex.ML.Note.prototype.init = function(element, options) {
     var pitch = this.element.getElementsByTagName('pitch')[0];
     if (! pitch) {
       throw new Error("Non-rest <note> must have a <pitch> element");
-      return undefined;
     }
     this.pitch = this.pitchToString(pitch);
   }
@@ -94,7 +93,6 @@ Vex.ML.Note.prototype.init = function(element, options) {
   }
   if (! this.duration) {
     throw new Error("Note does not have a duration");
-    return undefined;
   }
   // Symbolic note accidental
   var accidental = this.element.getElementsByTagName('accidental')[0];
@@ -113,7 +111,7 @@ Vex.ML.Note.prototype.init = function(element, options) {
   if (beamElem)
     this.beam = {
       number: parseInt(beamElem.getAttribute('number')),
-      type: beamElem.textContent,
+      type: beamElem.textContent
     };
   else
     this.beam = null;

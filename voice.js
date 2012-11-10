@@ -76,8 +76,6 @@ Vex.ML.Voice.prototype.createVexflowNotes = function(measureNum) {
     if ('clef' in this.options) {
       noteOptions.clef = this.options.clef;
     }
-    else
-      undefined;
     var vfNote = new Vex.Flow.StaveNote(noteOptions);
     // Force set number of ticks so that formatting, etc. is correct
     if (notes[i].numTicks) vfNote.ticks = notes[i].numTicks;
@@ -116,7 +114,7 @@ Vex.ML.Voice.prototype.createVexflowNotes = function(measureNum) {
               first_note: tiedNotes[n],
               last_note: tiedNotes[n+1],
               first_indices: [0], // FIXME: Chord support
-              last_indices: [0],
+              last_indices: [0]
             }));
           tiedNotes = new Array();
         }

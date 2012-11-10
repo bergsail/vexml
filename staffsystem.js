@@ -201,7 +201,7 @@ Vex.ML.StaffSystem.prototype.createStaves = function() {
       this.connectors.push({
         top_stave: stavesAbove,
         bottom_stave: stavesAbove + numStaves - 1,
-        type: Vex.Flow.StaveConnector.type.BRACE,
+        type: Vex.Flow.StaveConnector.type.BRACE
       });
     stavesAbove += numStaves;
   }
