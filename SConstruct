@@ -6,18 +6,18 @@ Requires: SCons, Git, and Google Closure Compiler
 from vexflow_scons import *
 
 vexml_sources = [
-      "header.js",
-      "base.js",
-      "element.js",
-      "document.js",
-      "part.js",
-      "attributes.js",
-      "measure.js",
-      "voice.js",
-      "partstaff.js",
-      "note.js",
-      "chord.js",
-      "staffsystem.js"
+      "src/header.js",
+      "src/base.js",
+      "src/element.js",
+      "src/document.js",
+      "src/part.js",
+      "src/attributes.js",
+      "src/measure.js",
+      "src/voice.js",
+      "src/partstaff.js",
+      "src/note.js",
+      "src/chord.js",
+      "src/staffsystem.js"
     ]
 
 Import("dbg opt")
