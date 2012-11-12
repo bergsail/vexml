@@ -43,13 +43,11 @@ Vex.ML.Viewer.prototype.layout = function() {
   this.element.innerHTML = "";
   var width = Math.floor(this.viewportWidth / this.zoom);
   var measure = 0;
-  if (this.doc.getPart(0).getMeasure(0)) measure = -1; // pickup measure
   while (measure < this.doc.getPart(0).getNumberOfMeasures()) {
-    measure++;
     var staffSystem = this.addStaffSystem({width:width,height:180},
       {start_measure:measure, x:20, y:10, width:Math.floor((width-40)/this.zoom)}
       );
-    measure = staffSystem.end_measure;
+    measure = staffSystem.end_measure + 1;
   }
 }
 
