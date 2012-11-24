@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>VexFlow MusicXML Viewer</title>
+    <meta name="viewport" content="initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
 
     <!-- Compiled Sources (may need to be copied to same directory) -->
     <script src="jquery.js"></script>
@@ -32,6 +33,12 @@
         req.send(null);
       });
     </script>
+    <style>
+      .vexml_viewer {
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body>
     <div class="vexml_viewer">
