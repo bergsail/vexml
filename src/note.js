@@ -47,12 +47,15 @@ Vex.ML.Note.prototype.init = function(element, options) {
   if (duration) {
     duration = parseInt(duration.textContent);
     if (isNaN(duration)) { throw new Error("can't parse note duration"); }
-    this.numTicks = options.measure.ticksPerDivision * duration;
+    if (options.measure.ticksPerDivision)
+      this.numTicks = options.measure.ticksPerDivision.clone().multiply(duration);
+    else
+      this.numTicks = new Vex.Flow.Fraction(0, 1);
 
     // FIXME: Calculate symbolic duration
     this.duration = "8";
   }
-  else this.numTicks = 0;
+  else this.numTicks = new Vex.Flow.Fraction(0, 1);
 
   var restElem = this.element.getElementsByTagName('rest')[0];
   if (restElem) {

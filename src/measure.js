@@ -30,7 +30,7 @@ Vex.ML.Measure.prototype.init = function(element, options) {
   if (! divisions) { return undefined; }
   this.divisions = divisions;
   // Vex.Flow.RESOLUTION == 4 quarter notes
-  this.ticksPerDivision = Vex.Flow.RESOLUTION / (4 * divisions);
+  this.ticksPerDivision = new Vex.Flow.Fraction(Vex.Flow.RESOLUTION, 4 * divisions);
   
   if (! ('clef' in this)) {
     var clefs = this.attributes.getElementsByTagName('clef');
