@@ -3,6 +3,13 @@ VeXML
 
 MusicXML display using VexFlow
 
+CAVEAT
+------
+
+## This repo is no longer being updated. I'm currently working on integrating MusicXML support with VexFlow directly. My latest changes should be on my fork of VexFlow:
+
+https://github.com/ringw/vexflow/tree/musicxml
+
 About
 -----
 
